@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  # Node.js service
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile-nodejs
+    ports:
+      - "3002:3002"
+    network_mode: bridge
+    volumes:
+      - .:/app
